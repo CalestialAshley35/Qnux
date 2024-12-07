@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qnux Deploy - Virtual Linux Distro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Qnux Deploy</h1>
+
+        <!-- Create Distro Form -->
+        <div class="create-distro">
+            <button id="createButton" onclick="showCreateForm()">Create Virtual Distro</button>
+            <div id="createForm" class="form-container" style="display: none;">
+                <h2>Create Your Virtual Distro</h2>
+                <label for="distroName">Distro Name:</label>
+                <input type="text" id="distroName" placeholder="Enter distro name">
+                
+                <label for="license">License:</label>
+                <input type="text" id="license" placeholder="Enter license type">
+
+                <label for="creator">Creator:</label>
+                <input type="text" id="creator" placeholder="Enter creator name">
+                
+                <button onclick="createDistro()">Done</button>
+            </div>
+        </div>
+
+        <!-- HTML Code Editor -->
+        <div id="developerSection" class="developer-section" style="display: none;">
+            <h2>Write Your HTML Code</h2>
+            <textarea id="htmlCode" rows="10" placeholder="Write your HTML code here..."></textarea>
+            <button onclick="previewHTML()">Develop</button>
+        </div>
+
+        <!-- Distro Info Section -->
+        <div id="distroInfo" class="distro-info" style="display: none;">
+            <h2>Your Virtual Distro Info</h2>
+            <p><strong>Name:</strong> <span id="distroNameDisplay"></span></p>
+            <p><strong>License:</strong> <span id="licenseDisplay"></span></p>
+            <p><strong>Creator:</strong> <span id="creatorDisplay"></span></p>
+        </div>
+
+        <!-- Output Preview -->
+        <div id="output" class="output" style="display: none;">
+            <h2>HTML Output</h2>
+            <iframe id="htmlOutput" src="about:blank" style="width: 100%; height: 400px;"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
