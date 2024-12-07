@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ubuntu-like Web OS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Taskbar (Top Bar) -->
+  <div class="taskbar">
+    <div class="taskbar-left">
+      <!-- Ubuntu Logo -->
+      <img src="https://raw.githubusercontent.com/CalestialAshley35/Qnux/2ff54b2c2101711495f2e8a747c96546cd493a22/download%20(1).jpeg" alt="Ubuntu Logo" class="logo">
+      <div class="system-menu">
+        <button class="menu-item" onclick="openSystemSettings()">System Settings</button>
+        <button class="menu-item" onclick="toggleApps()">Apps</button>
+      </div>
+    </div>
+    <div class="taskbar-right">
+      <div class="notification">Battery</div>
+      <div class="notification">Wi-Fi</div>
+    </div>
+  </div>
+
+  <!-- Dock -->
+  <div class="dock">
+    <!-- Git App Icon with Link -->
+    <div class="dock-icon" onclick="openApp('git')">
+      <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" width="40" height="40">
+    </div>
+    <!-- System Settings Icon -->
+    <div class="dock-icon" onclick="openApp('settings')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Settings_gear_icon_%28simplified%29.svg/2048px-Settings_gear_icon_%28simplified%29.svg.png" alt="Settings" width="40" height="40">
+    </div>
+  </div>
+
+  <!-- Hidden App Windows (initially off-screen) -->
+  <div class="app-window" id="gitWindow">
+    <div class="window-header">
+      <span>Git App</span>
+      <button onclick="closeApp('git')">X</button>
+    </div>
+    <iframe src="https://git-scm.com/" width="100%" height="100%"></iframe>
+  </div>
+
+  <!-- System Settings Window -->
+  <div class="app-window" id="settingsWindow">
+    <div class="window-header">
+      <span>System Settings</span>
+      <button onclick="closeApp('settings')">X</button>
+    </div>
+    <div class="settings-content">
+      <h2>Display Settings</h2>
+      <button onclick="changeTheme('dark')">Dark Theme</button>
+      <button onclick="changeTheme('light')">Light Theme</button>
+      <h2>Network Settings</h2>
+      <button onclick="toggleWiFi()">Toggle Wi-Fi</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
