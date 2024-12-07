@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qnux Packages</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Qnux Packages</h1>
+    
+    <!-- Type Selection -->
+    <div class="option">
+      <div onclick="selectType('text')">
+        <i class="fas fa-font fa-2x"></i>
+        <p>Text</p>
+      </div>
+      <div onclick="selectType('image')">
+        <i class="fas fa-image fa-2x"></i>
+        <p>Image</p>
+      </div>
+    </div>
+
+    <!-- Input Area for Text or Image -->
+    <div id="text-input" class="input-container" style="display: none;">
+      <h3>Enter Package Name and Text</h3>
+      <input type="text" id="package-name" placeholder="Package Name">
+      <textarea id="package-text" rows="5" placeholder="Type your text..."></textarea>
+      <button onclick="downloadText()">Download Text Package</button>
+    </div>
+
+    <div id="image-input" class="input-container" style="display: none;">
+      <h3>Upload Your Image</h3>
+      <input type="file" id="package-image">
+      <button onclick="downloadImage()">Download Image Package</button>
+    </div>
+
+    <!-- Output Section -->
+    <div id="output" class="output-container" style="display: none;">
+      <h3>Package Preview</h3>
+      <p id="output-text"></p>
+      <img id="output-image" src="" alt="" style="display: none;">
+      <button class="download-btn" id="download-btn">Download</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+        </html>
