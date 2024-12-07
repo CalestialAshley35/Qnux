@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qnux App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Apps</h1>
+        </header>
+
+        <section class="git-section">
+            <div class="icon">
+                <i class="fab fa-git-alt"></i>
+            </div>
+            <div class="info">
+                <p>Git is a free and open-source distributed version control system to track changes in your source code.</p>
+            </div>
+            <button onclick="window.location.href='apps/git/index.html'">Download</button>
+        </section>
+
+        <section class="linux-section">
+            <div class="icon">
+                <i class="fab fa-linux"></i>
+            </div>
+            <div class="info">
+                <p>Linux is an open-source Unix-like operating system kernel that is widely used in various computing devices.</p>
+            </div>
+            <button onclick="window.location.href='linux/index.html'">Download</button>
+        </section>
+
+        <!-- Distros Section (Table Format) -->
+        <section class="distros-section">
+            <h2>Distros</h2>
+            <table>
+                <tr>
+                    <th>Icon</th>
+                    <th>Information</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-ubuntu"></i></td>
+                    <td>Ubuntu is a popular Linux distribution based on Debian, known for its ease of use and wide community support.</td>
+                    <td><button onclick="window.location.href='apps/ubuntu/index.html'">Download</button></td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- New Qnux Deploy Section (Table Format) -->
+        <section class="qnux-deploy-section">
+            <h2>Qnux Deploy</h2>
+            <table>
+                <tr>
+                    <th>Icon</th>
+                    <th>Information</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-cloud-upload-alt"></i></td>
+                    <td>Qnux Deploy is a platform for deploying your Qnux Distros</td>
+                    <td><button onclick="window.location.href='deploy/qnux-deploy/index.html'">Deploy Now</button></td>
+                </tr>
+            </table>
+
+            <!-- Qnux Deploy Packages Table -->
+            <h3>Qnux Deploy Packages</h3>
+            <table>
+                <tr>
+                    <th>Package</th>
+                    <th>Information</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-box"></i></td>
+                    <td>Develop your own Package</td>
+                    <td><button onclick="window.location.href='deploy/packages/index.html'">Upload Package</button></td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
